@@ -31,12 +31,19 @@ if (day <= 10) {
 
 //task4 
 console.log('Task4');
-function countDigits(number) {
-    const units = number % 10;
-    const tens = Math.floor((number % 100) / 10);
-    const hungreds = Math.floor(number / 100);
+// function countDigits(number) {
+//     const units = number % 10;
+//     const tens = Math.floor((number % 100) / 10);
+//     const hungreds = Math.floor(number / 100);
 
-    return `In number ${number} количество сотен: ${hungreds}, десятков: ${tens}, единиц: ${units}`;
+//     return `In number ${number} количество сотен: ${hungreds}, десятков: ${tens}, единиц: ${units}`;
+// }
+function countDigits(number) {
+    const units = Math.floor(number % 10);
+    const tens = Math.floor((number % 100) / 10);
+    const hundreds = Math.floor((number % 1000) / 100);
+
+    return `В числе ${number} количество сотен: ${hundreds}, десятков: ${tens}, единиц: ${units}`;
 }
 
 let userNumber = Number(prompt("Enter your number for count units"));
